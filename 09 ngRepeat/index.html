@@ -8,13 +8,16 @@
     <!-- track by $index, handles dupes -->
     <div ng-repeat="el in myarr track by $index">
       {{ el }} : {{ $index }}
+      <!-- built ins -->
       {{ $first }} {{ $middle }} {{ $last }} {{ $even }} {{ $odd }}
     </div>
 
+    <!-- ng-repeat-start -->
     <div ng-repeat-start="user in users">
       <b>{{ user.name }}</b> : {{ user.age }}
     </div>
     <hr ng-repeat-end />
+    <!-- ng-repeat-end -->
 
     <div ng-repeat='attr in ob'>
       {{ attr }}

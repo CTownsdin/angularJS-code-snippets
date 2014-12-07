@@ -1,18 +1,5 @@
 // app.js
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 var app = angular.module('app', []);
 
 app.controller('MainController', function($scope) {
@@ -27,7 +14,7 @@ app.controller('MainController', function($scope) {
 })
 
 
-// preferred CONTROLLERS way, prostyle !
+// preferred CONTROLLERS way
 // angular.module('controllers', []).controller('MainController', function($scope) {
 //   $scope.val = 'test789';
 // })
