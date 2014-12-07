@@ -1,0 +1,24 @@
+<html ng-app='app'>
+  <head>
+    <style> /*special ng-cloak'ing css style*/
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important;}
+    </style>
+  </head>
+
+<body>
+  <h1>Angular ngCloak, hide that flash!</h1>
+
+  <div ng-controller='MainController'>
+    <span ng-cloak>{{ mydata }}
+      <div> Hi there, I'm html text and I'm cloaked too! BC I'm inside the span!
+      </div>
+    </span>
+  </div>
+
+
+
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+  <script type='text/javascript' src='app.js'></script>
+</body>
+
+</html>

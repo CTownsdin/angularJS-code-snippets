@@ -1,0 +1,35 @@
+<html ng-app='app'>
+
+<head>
+  <style>
+  /*special ng-cloak'ing css style*/
+
+  [ng\:cloak],
+  [ng-cloak],
+  [data-ng-cloak],
+  [x-ng-cloak],
+  .ng-cloak,
+  .x-ng-cloak {
+    display: none !important;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Angular Built In Filters</h1>
+  <div ng-controller="MainController">
+    <input ng-model="myfilter.name">-->
+    <!-- order by age! -->
+<!-- <div ng-repeat="user in mydata.arr | filter:myfilter | orderBy:'age'">
+ -->
+ <!-- chain filters -->
+      <div ng-repeat="user in mydata.arr | filter:myfilter | orderBy:'age' | limitTo:2">
+        {{ user }}
+      </div>
+    </div>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+    <script type='text/javascript' src='app.js'></script>
+</body>
+
+</html>

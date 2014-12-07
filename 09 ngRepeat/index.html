@@ -1,0 +1,29 @@
+<html ng-app='app'>
+
+<body>
+  <h1>Angular ngRepeat!</h1>
+
+  <div ng-controller='MainController'>
+
+    <!-- track by $index, handles dupes -->
+    <div ng-repeat="el in myarr track by $index">
+      {{ el }} : {{ $index }}
+      {{ $first }} {{ $middle }} {{ $last }} {{ $even }} {{ $odd }}
+    </div>
+
+    <div ng-repeat-start="user in users">
+      <b>{{ user.name }}</b> : {{ user.age }}
+    </div>
+    <hr ng-repeat-end />
+
+    <div ng-repeat='attr in ob'>
+      {{ attr }}
+    </div>
+
+  </div>
+
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+  <script type='text/javascript' src='app.js'></script>
+</body>
+
+</html>

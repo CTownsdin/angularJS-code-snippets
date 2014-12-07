@@ -1,0 +1,35 @@
+<html ng-app='app'>
+  <head>
+    <style> /*special ng-cloak'ing css style*/
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important;}
+    </style>
+  </head>
+
+<body>
+  <h1>Angular Built In Filters</h1>
+
+<!-- filter on arrays example -->
+<!--   <div ng-controller='MainController'>
+    <input ng-model="myfilter.str"> -->
+<!--     {{ myfilter.str | uppercase }}   to upper case-->
+<!--     {{ myfilter.str | date }}  --> <!-- filter millis to date ! -->
+
+    <!-- ng-repeat user in mydata.arr where it matches the typed input! -->
+    <!-- this is like the cities selector in iOS plantAlert! -->
+<!--     <div ng-repeat="user in mydata.arr | filter:myfilter.str">
+    {{ user }}
+  </div> -->
+
+  <!-- filter on object properties example -->
+  <div ng-controller="MainController">
+    <input ng-model="myfilter.name"> <!-- input becomes model myfilter.name -->
+    <div ng-repeat="user in mydata.arr | filter:myfilter"> <!-- ng-repeat thru that filter -->
+      {{ user }}
+    </div>
+  </div>
+
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+  <script type='text/javascript' src='app.js'></script>
+</body>
+
+</html>

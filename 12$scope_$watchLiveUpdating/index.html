@@ -1,0 +1,19 @@
+<html ng-app='app'>
+
+<body>
+  <h1>Angular $scope.$watch!</h1>
+
+  <div ng-controller='MainController'>
+    <input ng-model="mydata.val">
+      <h2>{{ mydata.val }}</h2>
+
+      <span ng-show="mydata.toolong">Input is too long!</span>
+  </div>
+
+
+
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+  <script type='text/javascript' src='app.js'></script>
+</body>
+
+</html>
