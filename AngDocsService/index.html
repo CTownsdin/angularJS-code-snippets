@@ -1,0 +1,15 @@
+<html ng-app='app'>
+  <body>
+    <h1>Hello SERVICES world!</h1>
+
+    <div id="simple" ng-controller="MyController">
+      <p>Let's try a simple notify service, used by a controller...</p>
+      <input ng-init="message='howdy'" ng-model="message" >
+      <button ng-click="callNotify(message);">NOTIFY</button>
+      <p>(you have to click 3 times to see)</p>
+    </div>
+
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js'></script>
+    <script type='text/javascript' src='app.js'></script>
+  </body>
+</html>

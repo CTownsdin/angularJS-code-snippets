@@ -1,0 +1,41 @@
+<html ng-app='app'>
+  <body>
+    <h1>Hello ng-show & ng-hide</h1>
+
+  <body ng-controller="MainCtrl">
+
+  selected: {{ selected }}
+
+    <ul>
+      <li ng-class="{current: selected == 100}">
+         <a href ng:click="setSelected(100)">ABC</a>
+      </li>
+      <li ng-class="{current: selected == 101}">
+         <a href ng:click="setSelected(101)">DEF</a>
+      </li>
+      <li ng-class="{current: selected == $index }"
+          ng-repeat="x in [4,5,6,7]">
+         <a href ng:click="setSelected($index)">A{{$index}}</a>
+      </li>
+    </ul>
+
+    <div
+      ng:show="selected == 100">
+      100
+    </div>
+    <div
+      ng:show="selected == 101">
+      101
+    </div>
+    <div ng-repeat="x in [4,5,6,7]" ng:show="selected == $index">
+      index: {{ $index }}
+    </div>
+
+  </body>
+
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js'></script>
+    <script type='text/javascript' src='app.js'></script>
+  </body>
+</html>
+
+$index     is the iterator offset of the repeated element (0..length-1)
